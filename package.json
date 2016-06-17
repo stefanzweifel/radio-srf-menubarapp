@@ -1,0 +1,23 @@
+{
+  "name": "radio-srf-menubar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "icy": "^2.1.0",
+    "lame": "^1.2.3",
+    "menubar": "^4.1.1",
+    "play-sound": "0.0.9",
+    "shelljs": "^0.7.0",
+    "speaker": "^0.3.0"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.2",
+    "electron-rebuild": "^1.1.5"
+  }
+}
