@@ -23,6 +23,12 @@ Sometimes I got an error like "Version x expected, y got". Rebuilding the module
 ./node_modules/.bin/electron-rebuild node-lame
 ```
 
+## Building new Release?
+
+```
+./node_modules/.bin/electron-packager . --platform=darwin --arch=x64
+```
+
 ## Todo
 
 - [ ] Fix known bugs
