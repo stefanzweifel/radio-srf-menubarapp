@@ -4,7 +4,7 @@ import RadioClient from './app/RadioClient';
 
 let mb = menubar({
     dir: __dirname,
-    icon: 'src/images/radio-icon@2x.png'
+    icon: 'src/resources/radio-icon@2x.png'
 });
 
 mb.on('ready', function ready () {
@@ -66,9 +66,9 @@ mb.on('ready', function ready () {
     }));
 
     radioMenu.append(new MenuItem({
-        label: 'Learn More',
+        label: 'Visit Repo',
         click() {
-            require('electron').shell.openExternal('http://electron.atom.io');
+            require('electron').shell.openExternal('https://github.com/stefanzweifel/radio-srf-menubarapp');
         }
     }));
 
@@ -78,7 +78,7 @@ mb.on('ready', function ready () {
             dialog.showMessageBox({
                 title: 'About',
                 message: 'Radio SRF v0.0.1 ALPHA - Created by Stefan Zweifel.',
-                detail: 'https://www.github.com/stefanzweifel',
+                detail: 'https://github.com/stefanzweifel/radio-srf-menubarapp',
                 buttons: ["OK"]
             });
         }

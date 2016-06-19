@@ -1,19 +1,26 @@
 {
   "name": "radio-srf-menubar",
   "version": "1.0.0",
-  "description": "",
+  "description": "Menubar application to stream Radio SRF Stations.",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
+    "build": "./node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --icon='src/macOS.icns' --out='./dist/' --overwrite  --app-copyright='Copyright © 2016 Stefan Zweifel' --app-version=0.0.1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Stefan Zweifel <hello@stefanzweifel.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanzweifel/radio-srf-menubarapp"
+  },
+    "bugs": {
+    "url": "https://github.com/stefanzweifel/radio-srf-menubarapp/issues"
+  },
+  "license": "MIT",
   "dependencies": {
     "icy": "^2.1.0",
     "lame": "^1.2.3",
     "menubar": "^4.1.1",
-    "shelljs": "^0.7.0",
     "speaker": "^0.3.0"
   },
   "devDependencies": {

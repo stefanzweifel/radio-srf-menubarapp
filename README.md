@@ -26,8 +26,10 @@ Sometimes I got an error like "Version x expected, y got". Rebuilding the module
 ## Building new Release?
 
 ```
-./node_modules/.bin/electron-packager . --platform=darwin --arch=x64
+./node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --icon="src/images/macOS-Icon.icns" --overwrite
 ```
+
+or `npm build`
 
 ## Todo
 
