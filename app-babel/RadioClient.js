@@ -1,5 +1,5 @@
-import icy from 'icy';
-import lame from 'lame';
+// import icy from 'icy';
+// import lame from 'lame';
 import Speaker from 'speaker';
 
 export default class RadioClient {
@@ -14,10 +14,6 @@ export default class RadioClient {
 
         if (this.isPlaying === true) {
             this.stop();
-
-            setTimeout(function() {
-                console.log('Blah blah blah blah extra-blah');
-            }, 3000);
         }
 
         icy.get(url, (res) => {
