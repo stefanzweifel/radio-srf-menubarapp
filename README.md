@@ -33,14 +33,9 @@ or `npm build`
 
 ## Todo
 
-- [ ] Fix known bugs
 - [ ] Add Tests
 - [ ] Add MediaKey Support
 - [ ] Display current song
-
-## Known Bugs
-
-- [ ] "Stop"-Button takes some seconds to take effect.
 
 ## Icons
 
