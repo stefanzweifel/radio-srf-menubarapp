@@ -1,5 +1,5 @@
-// import icy from 'icy';
-// import lame from 'lame';
+import icy from 'icy';
+import lame from 'lame';
 import Speaker from 'speaker';
 
 export default class RadioClient {
