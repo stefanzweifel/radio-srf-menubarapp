@@ -2,6 +2,9 @@
 
 > I'm not connected with Radio SRF. This is just a weekend project.
 
+![Screenshot](https://raw.githubusercontent.com/stefanzweifel/radio-srf-menubarapp/master/resources/screenshot.png)
+
+
 This simple menubar application plays SRF Radiostations. Currently the following stations are supported:
 
 - Radio SRF 1
