@@ -1,11 +1,10 @@
-import "babel-register";
+// import "babel-register";
 import {Menu, MenuItem, dialog, app} from 'electron';
 import menubar from 'menubar';
 import RadioClient from './RadioClient';
 
 let mb = menubar({
-    dir: __dirname,
-    icon: './src/resources/radio-icon@2x.png'
+    icon: __dirname + '/radio-icon.png'
 });
 
 mb.on('ready', function ready () {

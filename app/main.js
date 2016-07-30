@@ -1,7 +1,5 @@
 'use strict';
 
-require('babel-register');
-
 var _electron = require('electron');
 
 var _menubar = require('menubar');
@@ -15,9 +13,9 @@ var _RadioClient2 = _interopRequireDefault(_RadioClient);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mb = (0, _menubar2.default)({
-    dir: __dirname,
-    icon: './src/resources/radio-icon@2x.png'
-});
+    icon: __dirname + '/radio-icon.png'
+}); // import "babel-register";
+
 
 mb.on('ready', function ready() {
 
