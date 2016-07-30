@@ -10,11 +10,15 @@ This simple menubar application plays SRF Radiostations. Currently the following
 - Radio SRF 4 News
 - Radio SRF Virus
 
+## Download
+
+Download the latest version from in the [releases tab](https://github.com/stefanzweifel/radio-srf-menubarapp/releases).
+
 ## Local Development
 
 1. `npm install`
 2. `npm start`
-2.1 `npm run compile:babel`
+3 `npm run compile:babel`
 
 ### Version Mismatch?
 
@@ -26,7 +30,7 @@ Sometimes I got an error like "Version x expected, y got". Rebuilding the module
 
 ### Build new Version
 
-1. Update Version in app/package.json
+1. Update Version in `app/package.json`
 2. Run `npm run package`
 
 ## Todo
