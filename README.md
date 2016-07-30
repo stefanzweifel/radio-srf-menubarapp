@@ -14,6 +14,7 @@ This simple menubar application plays SRF Radiostations. Currently the following
 
 1. `npm install`
 2. `npm start`
+2.1 `npm run compile:babel`
 
 ### Version Mismatch?
 
@@ -23,24 +24,16 @@ Sometimes I got an error like "Version x expected, y got". Rebuilding the module
 ./node_modules/.bin/electron-rebuild node-lame
 ```
 
-## Building new Release?
+### Build new Version
 
-```
-./node_modules/.bin/electron-packager . --platform=darwin --arch=x64 --icon="src/images/macOS-Icon.icns" --overwrite
-```
-
-or `npm build`
+1. Update Version in app/package.json
+2. Run `npm run package`
 
 ## Todo
 
-- [ ] Fix known bugs
 - [ ] Add Tests
 - [ ] Add MediaKey Support
 - [ ] Display current song
-
-## Known Bugs
-
-- [ ] "Stop"-Button takes some seconds to take effect.
 
 ## Icons
 

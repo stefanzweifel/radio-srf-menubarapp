@@ -1,22 +1,21 @@
+// import "babel-register";
 import {Menu, MenuItem, dialog, app} from 'electron';
 import menubar from 'menubar';
-import RadioClient from './app/RadioClient';
+import RadioClient from './RadioClient';
 
 let mb = menubar({
-    dir: __dirname,
-    icon: 'src/resources/radio-icon@2x.png'
+    icon: __dirname + '/radio-icon.png'
 });
 
 mb.on('ready', function ready () {
 
-    const radioMenu = new Menu();
+    let radioMenu = new Menu();
     let radioClient = new RadioClient();
 
     radioMenu.append(new MenuItem(    {
         label: 'Radio SRF1',
         click() {
             radioClient.stream('http://stream.srg-ssr.ch/m/drs1/mp3_128');
-            radioMenu.items[0].enabled = false;
         }
     }));
 
@@ -24,21 +23,18 @@ mb.on('ready', function ready () {
         label: 'Radio SRF2',
         click() {
             radioClient.stream('http://stream.srg-ssr.ch/m/drs2/mp3_128');
-            radioMenu.items[1].enabled = false;
         }
     }));
     radioMenu.append(new MenuItem(    {
         label: 'Radio SRF3',
         click() {
             radioClient.stream('http://stream.srg-ssr.ch/m/drs3/mp3_128');
-            radioMenu.items[2].enabled = false;
         }
     }));
     radioMenu.append(new MenuItem(    {
         label: 'Radio SRF4 News',
         click() {
             radioClient.stream('http://stream.srg-ssr.ch/m/drs4news/mp3_128');
-            radioMenu.items[3].enabled = false;
         }
     }));
 
@@ -46,7 +42,6 @@ mb.on('ready', function ready () {
         label: 'Radio SRF Virus',
         click() {
             radioClient.stream('http://stream.srg-ssr.ch/m/drsvirus/mp3_128');
-            radioMenu.items[4].enabled = false;
         }
     }));
 
@@ -55,7 +50,7 @@ mb.on('ready', function ready () {
     }));
 
     radioMenu.append(new MenuItem(    {
-        label: 'Stop playback (currently has delay)',
+        label: 'Stop',
         click() {
             radioClient.stop();
         }
@@ -66,7 +61,7 @@ mb.on('ready', function ready () {
     }));
 
     radioMenu.append(new MenuItem({
-        label: 'Visit Repo',
+        label: 'Github Repository',
         click() {
             require('electron').shell.openExternal('https://github.com/stefanzweifel/radio-srf-menubarapp');
         }
@@ -76,9 +71,9 @@ mb.on('ready', function ready () {
         label: 'About',
         click() {
             dialog.showMessageBox({
-                title: 'About',
-                message: 'Radio SRF v0.0.1 ALPHA - Created by Stefan Zweifel.',
-                detail: 'https://github.com/stefanzweifel/radio-srf-menubarapp',
+                title: 'Über',
+                message: 'Radio SRF v0.0.2 ALPHA - Created by Stefan Zweifel.',
+                detail: `Danke dass du diese kleine App nutzt! 🙌🏼`,
                 buttons: ["OK"]
             });
         }
@@ -93,8 +88,3 @@ mb.on('ready', function ready () {
 
     mb.tray.setContextMenu(radioMenu);
 })
-
-
-
-
-// Accelerator - Media Keys

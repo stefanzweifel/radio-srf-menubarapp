@@ -6,22 +6,17 @@ export default class RadioClient {
 
     constructor() {
         this.currentlyPlaying = null;
-        this.isPlaying = false;
+        this.isPlaying        = false;
+        this.speaker          = new Speaker();
     }
 
     stream(url) {
 
         if (this.isPlaying === true) {
             this.stop();
-
-            setTimeout(function() {
-                console.log('Blah blah blah blah extra-blah');
-            }, 3000);
         }
 
         icy.get(url, (res) => {
-
-            // console.error(res.headers);
 
             // log any "metadata" events that happen
             // TODO: Would be nice if this information could be displayed in
@@ -34,7 +29,7 @@ export default class RadioClient {
             });
 
             this.currentlyPlaying = res;
-            res.pipe(new lame.Decoder()).pipe(new Speaker());
+            res.pipe(new lame.Decoder()).pipe(this.speaker);
             this.isPlaying = true;
         });
     }
@@ -46,8 +41,11 @@ export default class RadioClient {
      */
     stop() {
         if (this.isPlaying === true) {
-            this.currentlyPlaying.res.client.destroy();
+            this.speaker.close(); // Mute Sound
+            this.currentlyPlaying.res.client.destroy(); // Close Connection
+
             this.isPlaying = false;
+            this.speaker = new Speaker();
         }
     }
 
