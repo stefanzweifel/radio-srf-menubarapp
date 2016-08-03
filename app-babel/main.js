@@ -1,5 +1,5 @@
 // import "babel-register";
-import {Menu, MenuItem, dialog, app} from 'electron';
+import {Menu, MenuItem, dialog, app, globalShortcut} from 'electron';
 import menubar from 'menubar';
 import RadioClient from './RadioClient';
 
@@ -85,6 +85,14 @@ mb.on('ready', function ready () {
             app.quit();
         }
     }));
+
+
+    // Stop Radio Client when hitting Play/Pause Button
+    // Crashed application or throws errors :(
+    // globalShortcut.register('MediaPlayPause', () => {
+    //     radioClient.stop();
+    // })
+
 
     mb.tray.setContextMenu(radioMenu);
 })
