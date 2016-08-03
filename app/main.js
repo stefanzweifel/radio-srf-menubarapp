@@ -96,5 +96,11 @@ mb.on('ready', function ready() {
         }
     }));
 
+    // Stop Radio Client when hitting Play/Pause Button
+    // Crashed application or throws errors :(
+    // globalShortcut.register('MediaPlayPause', () => {
+    //     radioClient.stop();
+    // })
+
     mb.tray.setContextMenu(radioMenu);
 });
