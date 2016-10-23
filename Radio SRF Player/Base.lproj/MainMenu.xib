@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Radio_SRF_Player" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="phq-x7-59r" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="Radio_SRF_Player" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="Oqj-Lp-biz" id="ufT-Xv-y5d"/>
+            </connections>
+        </customObject>
+        <menu id="Oqj-Lp-biz">
+            <items>
+                <menuItem title="Radio SRF 1" id="tsu-Cg-Wcc" userLabel="RadioSRF1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <accessibility description="Radio SRF 1"/>
+                    <connections>
+                        <action selector="playRadioSRF1:" target="phq-x7-59r" id="FqV-Hc-wBn"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Radio SRF 2" id="Qoh-4X-6So" userLabel="RadioSRF2">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="playRadioSrf2:" target="phq-x7-59r" id="3Ys-kd-ufs"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Radio SRF 3" id="fwk-pv-Zfl" userLabel="RadioSRF3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="playRadioSrf3:" target="phq-x7-59r" id="dEg-UN-qXB"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Radio SRF 4 News" id="lwj-wg-Hx5" userLabel="RadioSRF4News">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="playRadioSrf4:" target="phq-x7-59r" id="Chq-95-4HE"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Radio SRF Virus" id="UYt-sa-VOG" userLabel="RadioSRFVirus">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="playRadioSrfVirus:" target="phq-x7-59r" id="Yib-QR-3n1"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="gCO-Ja-Hv5"/>
+                <menuItem title="Stopp" id="wJy-Em-zwc" userLabel="Stop">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="stopPlayback:" target="phq-x7-59r" id="T60-59-eCJ"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="2qr-XR-a07"/>
+                <menuItem title="Schliessen" id="Dzt-Cf-IhY">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClickedWithSender:" target="phq-x7-59r" id="aEd-ju-fyZ"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>
