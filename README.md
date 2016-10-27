@@ -4,6 +4,7 @@
 
 ![Screenshot](https://raw.githubusercontent.com/stefanzweifel/radio-srf-menubarapp/master/resources/screenshot.png)
 
+**NEW: I've switched from Electron to Swift. The app will no longer work with Windows or Linux.**
 
 This simple menubar application plays SRF Radiostations. Currently the following stations are supported:
 
@@ -16,25 +17,6 @@ This simple menubar application plays SRF Radiostations. Currently the following
 ## Download
 
 Download the latest version from the [releases tab](https://github.com/stefanzweifel/radio-srf-menubarapp/releases).
-
-## Local Development
-
-1. `npm install`
-2. `npm start`
-3 `npm run compile:babel`
-
-### Version Mismatch?
-
-Sometimes I got an error like "Version x expected, y got". Rebuilding the module helped.
-
-```bash
-./node_modules/.bin/electron-rebuild node-lame
-```
-
-### Build new Version
-
-1. Update Version in `app/package.json`
-2. Run `npm run package`
 
 ## Todo
 
