@@ -13,6 +13,7 @@
 		F842070C1DBD340200F5DE73 /* Radio_SRF_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F842070B1DBD340200F5DE73 /* Radio_SRF_PlayerTests.swift */; };
 		F84207171DBD340200F5DE73 /* Radio_SRF_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84207161DBD340200F5DE73 /* Radio_SRF_PlayerUITests.swift */; };
 		F84207251DBD3B9A00F5DE73 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84207241DBD3B9A00F5DE73 /* StatusMenuController.swift */; };
+		F8C0C4361DBD4ACA0046870B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C0C4351DBD4ACA0046870B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		F84207161DBD340200F5DE73 /* Radio_SRF_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio_SRF_PlayerUITests.swift; sourceTree = "<group>"; };
 		F84207181DBD340200F5DE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F84207241DBD3B9A00F5DE73 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		F8C0C4351DBD4ACA0046870B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C0C4361DBD4ACA0046870B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 				F842070A1DBD340200F5DE73 /* Radio SRF PlayerTests */,
 				F84207151DBD340200F5DE73 /* Radio SRF PlayerUITests */,
 				F84206F91DBD340200F5DE73 /* Products */,
+				F8C0C4341DBD4ACA0046870B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +124,14 @@
 				F84207181DBD340200F5DE73 /* Info.plist */,
 			);
 			path = "Radio SRF PlayerUITests";
+			sourceTree = "<group>";
+		};
+		F8C0C4341DBD4ACA0046870B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8C0C4351DBD4ACA0046870B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +517,7 @@
 				F842071D1DBD340200F5DE73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F842071E1DBD340200F5DE73 /* Build configuration list for PBXNativeTarget "Radio SRF PlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +526,7 @@
 				F84207201DBD340200F5DE73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F84207211DBD340200F5DE73 /* Build configuration list for PBXNativeTarget "Radio SRF PlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +535,7 @@
 				F84207231DBD340200F5DE73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
