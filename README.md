@@ -18,7 +18,7 @@ This simple menubar application plays SRF Radiostations. Currently the following
 
 Download the latest version from the [releases tab](https://github.com/stefanzweifel/radio-srf-menubarapp/releases).
 
-## Todo
+## Todo
 
 - [ ] Add Tests
 - [ ] Add MediaKey Support
