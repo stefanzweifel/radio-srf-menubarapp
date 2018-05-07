@@ -13,7 +13,7 @@ This simple menubar application plays SRF Radiostations. Currently the following
 - Radio SRF Virus
 - Radio SRF Musikwelle
 
-## Download
+## Download
 
 Download the latest version from the [releases tab](https://github.com/stefanzweifel/radio-srf-menubarapp/releases).
 
