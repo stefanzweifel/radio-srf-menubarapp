@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Radio_SRF_Player
+//@testable import Radio_SRF_Player
 
 class Radio_SRF_PlayerTests: XCTestCase {
     

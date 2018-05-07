@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -52,6 +51,12 @@
                         <action selector="playRadioSrfVirus:" target="phq-x7-59r" id="Yib-QR-3n1"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Radio SRF Musikwelle" id="gcD-J9-IUj">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="playRadioSrfMusikwelle:" target="phq-x7-59r" id="01H-Kf-AaL"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="gCO-Ja-Hv5"/>
                 <menuItem title="Stopp" id="wJy-Em-zwc" userLabel="Stop">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -67,6 +72,7 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="137.5" y="-188.5"/>
         </menu>
     </objects>
 </document>

@@ -13,12 +13,12 @@ class StatusMenuController: NSObject {
     
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     var avPlayer: AVPlayer!
     
     override func awakeFromNib() {
-        let icon = NSImage(named: "statusIcon")
+        let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
         
         icon?.isTemplate = true // best for dark mode
         statusItem.image = icon
@@ -27,7 +27,7 @@ class StatusMenuController: NSObject {
     }
     
     @IBAction func quitClicked(sender: NSMenuItem) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
     @IBAction func playRadioSRF1(_ sender: NSMenuItem) {
@@ -53,6 +53,12 @@ class StatusMenuController: NSObject {
     
     @IBAction func playRadioSrfVirus(_ sender: NSMenuItem) {
         avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/m/drsvirus/mp3_128")! as URL)
+        avPlayer.play()
+    }
+    
+    
+    @IBAction func playRadioSrfMusikwelle(_ sender: NSMenuItem) {
+        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/drsmw/mp3_128.m3u")! as URL)
         avPlayer.play()
     }
     
