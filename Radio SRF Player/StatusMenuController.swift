@@ -17,6 +17,7 @@ class StatusMenuController: NSObject {
     
     var avPlayer: AVPlayer!
     var avPlayerItem: AVPlayerItem!
+    var timerTrackDisplay: Timer?
     
     override func awakeFromNib() {
         let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
@@ -56,16 +57,71 @@ class StatusMenuController: NSObject {
         playRadio(radioUrl: "http://stream.srg-ssr.ch/drsmw/mp3_128.m3u")
     }
     
-    func playRadio(radioUrl: String)
-    {
+    func playRadio(radioUrl: String) {
+        stopPlayerItemAndTimer()
+        
         avPlayerItem = AVPlayerItem(url: NSURL(string: radioUrl)! as URL)
+        avPlayerItem.addObserver(self, forKeyPath: "timedMetadata", options: NSKeyValueObservingOptions(), context: nil)
         
         avPlayer = AVPlayer(playerItem: avPlayerItem)
         avPlayer.play()
     }
     
+    override func observeValue(forKeyPath: String?, of: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if forKeyPath != "timedMetadata" { return }
+        
+        let data: AVPlayerItem = of as! AVPlayerItem
+        
+        var track: String = ""
+        
+        for item in data.timedMetadata! as [AVMetadataItem] {
+            
+            if item.commonKey == AVMetadataKey.commonKeyTitle {
+                if timerTrackDisplay != nil {
+                    timerTrackDisplay?.invalidate()
+                    timerTrackDisplay = nil
+                }
+                
+                track = item.value as! String
+                
+                var startCharacterIndex = 0
+                
+                let filler = "  ***  "
+                let displayTrackLength = track.count + filler.count
+                let displayTrack = track + filler + track
+                
+                timerTrackDisplay = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) {
+                    _ in DispatchQueue.main.async {
+                        
+                        if startCharacterIndex >= displayTrackLength
+                        {
+                            startCharacterIndex = 0
+                        }
+                        
+                        let endCharacterIndex = startCharacterIndex + 9 //display 9 chars at once
+                        let range = startCharacterIndex..<endCharacterIndex
+                        
+                        
+                        let shortenedTrack = String(displayTrack[range])
+                        
+                        self.statusItem.title = shortenedTrack
+                        
+                        startCharacterIndex = startCharacterIndex + 1
+                        
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+    
     @IBAction func stopPlayback(_ sender: NSMenuItem) {
+        stopPlayerItemAndTimer()
         stopPlayer()
+        
+        statusItem.title = "Radio App"
     }
     
     func stopPlayer() {
@@ -74,4 +130,29 @@ class StatusMenuController: NSObject {
         }
     }
     
+    func stopPlayerItemAndTimer() {
+        if avPlayerItem != nil {
+            avPlayerItem.removeObserver(self, forKeyPath: "timedMetadata")
+            avPlayerItem = nil
+            
+            if timerTrackDisplay != nil {
+                timerTrackDisplay?.invalidate()
+                timerTrackDisplay = nil
+            }
+        }
+    }
+}
+
+extension String {
+    subscript (bounds: CountableClosedRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start...end])
+    }
+    
+    subscript (bounds: CountableRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start..<end])
+    }
 }
