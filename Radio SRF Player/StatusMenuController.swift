@@ -16,6 +16,7 @@ class StatusMenuController: NSObject {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     var avPlayer: AVPlayer!
+    var avPlayerItem: AVPlayerItem!
     
     override func awakeFromNib() {
         let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
@@ -56,7 +57,9 @@ class StatusMenuController: NSObject {
     
     func playRadio(radioUrl: String)
     {
-        avPlayer = AVPlayer.init(url: NSURL(string: radioUrl)! as URL)
+        avPlayerItem = AVPlayerItem(url: NSURL(string: radioUrl)! as URL)
+        
+        avPlayer = AVPlayer(playerItem: avPlayerItem)
         avPlayer.play()
     }
     
