@@ -13,7 +13,7 @@ class StatusMenuController: NSObject {
     
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: 120)
     
     var avPlayer: AVPlayer!
     var avPlayerItem: AVPlayerItem!
@@ -24,6 +24,7 @@ class StatusMenuController: NSObject {
         icon?.isTemplate = true // best for dark mode
         statusItem.image = icon
         statusItem.menu = statusMenu
+        statusItem.title = "Radio App"
  
     }
     
