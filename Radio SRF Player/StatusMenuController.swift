@@ -31,34 +31,32 @@ class StatusMenuController: NSObject {
     }
     
     @IBAction func playRadioSRF1(_ sender: NSMenuItem) {
-        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/m/drs1/mp3_128")! as URL)
-        avPlayer.play()
+        playRadio(radioUrl: "http://stream.srg-ssr.ch/m/drs1/mp3_128")
     }
     
     @IBAction func playRadioSrf2(_ sender: NSMenuItem) {
-        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/m/drs2/mp3_128")! as URL)
-        avPlayer.play()
+        playRadio(radioUrl: "http://stream.srg-ssr.ch/m/drs2/mp3_128")
     }
     
     @IBAction func playRadioSrf3(_ sender: NSMenuItem) {
-        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/m/drs3/mp3_128")! as URL)
-        avPlayer.play()
+        playRadio(radioUrl: "http://stream.srg-ssr.ch/m/drs3/mp3_128")
     }
-
     
     @IBAction func playRadioSrf4(_ sender: NSMenuItem) {
-        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/m/drs4news/mp3_128")! as URL)
-        avPlayer.play()
+        playRadio(radioUrl: "http://stream.srg-ssr.ch/m/drs4news/mp3_128")
     }
     
     @IBAction func playRadioSrfVirus(_ sender: NSMenuItem) {
-        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/m/drsvirus/mp3_128")! as URL)
-        avPlayer.play()
+        playRadio(radioUrl: "http://stream.srg-ssr.ch/m/drsvirus/mp3_128")
     }
     
-    
     @IBAction func playRadioSrfMusikwelle(_ sender: NSMenuItem) {
-        avPlayer = AVPlayer.init(url: NSURL(string: "http://stream.srg-ssr.ch/drsmw/mp3_128.m3u")! as URL)
+        playRadio(radioUrl: "http://stream.srg-ssr.ch/drsmw/mp3_128.m3u")
+    }
+    
+    func playRadio(radioUrl: String)
+    {
+        avPlayer = AVPlayer.init(url: NSURL(string: radioUrl)! as URL)
         avPlayer.play()
     }
     
