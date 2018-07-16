@@ -61,6 +61,10 @@ class StatusMenuController: NSObject {
     }
     
     @IBAction func stopPlayback(_ sender: NSMenuItem) {
+        stopPlayer()
+    }
+    
+    func stopPlayer() {
         if avPlayer != nil {
             avPlayer.pause();
         }
