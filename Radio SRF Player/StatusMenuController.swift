@@ -86,22 +86,19 @@ class StatusMenuController: NSObject {
                 
                 var startCharacterIndex = 0
                 
-                let filler = "  ***  "
-                let displayTrackLength = track.count + filler.count
-                let displayTrack = track + filler + track
+                let filler = "  ***  " // string that is displayed before the track repeats
+                let displayTrackLength = track.count + filler.count // after this count of chars we have to repeat the track title
+                let displayTrack = track + filler + track // attaching the track string to simplify code
                 
                 timerTrackDisplay = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) {
                     _ in DispatchQueue.main.async {
                         
-                        if startCharacterIndex >= displayTrackLength
-                        {
+                        if startCharacterIndex >= displayTrackLength {
                             startCharacterIndex = 0
                         }
                         
-                        let endCharacterIndex = startCharacterIndex + 9 //display 9 chars at once
+                        let endCharacterIndex = startCharacterIndex + 9 // display 9 chars at once
                         let range = startCharacterIndex..<endCharacterIndex
-                        
-                        
                         let shortenedTrack = String(displayTrack[range])
                         
                         self.statusItem.title = shortenedTrack
