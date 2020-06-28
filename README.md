@@ -12,6 +12,9 @@ This simple menubar application plays SRF Radiostations. Currently the following
 - Radio SRF 4 News
 - Radio SRF Virus
 - Radio SRF Musikwelle
+- Radio Swiss Pop
+- Radio Swiss Jazz
+- Radio Swiss Classic
 
 ## Download
 
