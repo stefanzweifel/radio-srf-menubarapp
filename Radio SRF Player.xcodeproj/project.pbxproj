@@ -197,25 +197,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Stefan Zweifel";
 				TargetAttributes = {
 					F84206F71DBD340200F5DE73 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 					};
 					F84207061DBD340200F5DE73 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = ER2BZ5WHC2;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F84206F71DBD340200F5DE73;
 					};
 					F84207111DBD340200F5DE73 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = ER2BZ5WHC2;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F84206F71DBD340200F5DE73;
 					};
@@ -223,7 +223,7 @@
 			};
 			buildConfigurationList = F84206F31DBD340200F5DE73 /* Build configuration list for PBXProject "Radio SRF Player" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -324,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -383,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -434,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Radio SRF Player/Info.plist";
@@ -442,7 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.stefanzweifel.Radio-SRF-Player";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -450,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Radio SRF Player/Info.plist";
@@ -458,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.stefanzweifel.Radio-SRF-Player";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -474,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.stefanzweifel.Radio-SRF-PlayerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radio SRF Player.app/Contents/MacOS/Radio SRF Player";
 			};
 			name = Debug;
@@ -491,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.stefanzweifel.Radio-SRF-PlayerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radio SRF Player.app/Contents/MacOS/Radio SRF Player";
 			};
 			name = Release;
@@ -507,7 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.stefanzweifel.Radio-SRF-PlayerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Radio SRF Player";
 			};
 			name = Debug;
@@ -523,7 +527,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.stefanzweifel.Radio-SRF-PlayerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Radio SRF Player";
 			};
 			name = Release;
