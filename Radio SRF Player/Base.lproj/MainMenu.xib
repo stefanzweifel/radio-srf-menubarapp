@@ -71,7 +71,7 @@
                         <action selector="playRadioSwissJazz:" target="phq-x7-59r" id="tUr-dT-VeI"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Radio Classic" id="Jtf-8Z-Fgz">
+                <menuItem title="Radio Swiss Classic" id="Jtf-8Z-Fgz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="playRadioClassic:" target="phq-x7-59r" id="0QP-NQ-7Rn"/>

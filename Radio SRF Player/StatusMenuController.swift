@@ -21,7 +21,7 @@ class StatusMenuController: NSObject {
         let icon = NSImage(named: "statusIcon")
 
         icon?.isTemplate = true // best for dark mode
-        statusItem.image = icon
+        statusItem.button?.image = icon
         statusItem.menu = statusMenu
 
     }
