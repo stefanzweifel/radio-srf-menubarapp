@@ -1,10 +1,10 @@
-# Radio SRF Menubar Application
+# Radio SRF Player
 
-> I'm not connected with Radio SRF. This is just a weekend project.
+> This is not an official app made by SRF. I'm not affiliated with SRF. This is just a side project.
 
 ![Screenshot](https://raw.githubusercontent.com/stefanzweifel/radio-srf-menubarapp/master/resources/screenshot.png)
 
-This simple menubar application plays SRF Radiostations. Currently the following stations are supported:
+A macOS menu bar app to play Swiss public radio stations. Currently the following stations are supported.
 
 - Radio SRF 1
 - Radio SRF 2
