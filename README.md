@@ -20,6 +20,10 @@ A macOS menu bar app to play Swiss public radio stations. Currently the followin
 
 Download the latest version from the [releases tab](https://github.com/stefanzweifel/radio-srf-menubarapp/releases).
 
+## New Build
+
+Create a new Archive by clicking "Product" → "Archive" → "Distribute App".
+
 ## Icons
 
 - [zondicons.com](http://zondicons.com)
