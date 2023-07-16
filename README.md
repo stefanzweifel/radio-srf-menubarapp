@@ -24,10 +24,6 @@ Download the latest version from the [releases tab](https://github.com/stefanzwe
 
 Create a new Archive by clicking "Product" → "Archive" → "Distribute App".
 
-## Icons
-
-- [zondicons.com](http://zondicons.com)
-
 ## License
 
 MIT
